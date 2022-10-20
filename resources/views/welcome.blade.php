@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    @csrf
     <h1>Hello world</h1>
-
+    <a href="/page2">click</a>
 </body>
 </html>
