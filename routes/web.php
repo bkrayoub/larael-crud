@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-
+    return 'this is home page';
 });
-Route::get('/page2', function () {
-    return view('page2');
-    
+
+Route::get('/{id}', function ($id) {
+    return 'your number is: '.$id;
+});
+Route::get('/{id}/{name}', function ($id,$name) {
+    return '<h1>Your name is: '.$name.', and your number is: '.$id.'</h1>';
 });
