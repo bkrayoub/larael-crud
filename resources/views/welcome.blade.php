@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Hello world</h1>
-    <h1>routing</h1>
+    <a href="/page2"><h1>Click</h1></a>
 </body>
 </html>
