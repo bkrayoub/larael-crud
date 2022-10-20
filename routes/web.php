@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\promotonsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'this is home page';
-});
+// Route::get('/', function () {
+//     return 'this is home page';
+// });
 
-Route::get('/{id}', function ($id) {
-    return 'your number is: '.$id;
-});
-Route::get('/{id}/{name}', function ($id,$name) {
-    return '<h1>Your name is: '.$name.', and your number is: '.$id.'</h1>';
-});
+// Route::get('/{id}', function ($id) {
+//     return 'your number is: '.$id;
+// });
+// Route::get('/{id}/{name}', function ($id,$name) {
+//     return '<h1>Your name is: '.$name.', and your number is: '.$id.'</h1>';
+// });
+
+Route::resource('promotion', promotonsController::class);

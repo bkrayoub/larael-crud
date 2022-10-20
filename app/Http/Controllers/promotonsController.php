@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class promotionsController extends Controller
+class promotonsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -45,7 +45,7 @@ class promotionsController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'id is: '.$id;
     }
 
     /**
