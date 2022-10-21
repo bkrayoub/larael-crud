@@ -17,7 +17,6 @@ use App\http\Controllers\promotonsController;
 // Route::get('/', function () {
 //     return 'this is home page';
 // });
-
 // Route::get('/{id}', function ($id) {
 //     return 'your number is: '.$id;
 // });
@@ -25,4 +24,10 @@ use App\http\Controllers\promotonsController;
 //     return '<h1>Your name is: '.$name.', and your number is: '.$id.'</h1>';
 // });
 
-Route::resource('promotion', promotonsController::class);
+// Route::resource('promotion', promotonsController::class);
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/index', [promotonsController::class , 'index']);
+
+

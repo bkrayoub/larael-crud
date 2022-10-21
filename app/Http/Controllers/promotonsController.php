@@ -11,9 +11,10 @@ class promotonsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $req = $request->name;
+        return $req;
     }
 
     /**
