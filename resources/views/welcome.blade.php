@@ -1,9 +1,10 @@
 
 
-@section('content')
 
 <h2><a href="/add">Add Promotoin</a></h2>
-<table>
+<input type="text" name="search" id="search">
+
+<table id="data">
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -19,4 +20,7 @@
             </td>
         </tr>
     @endforeach
+
 </table>
+
+<script src="{{ URL::asset('js/search.js')}}"></script>
