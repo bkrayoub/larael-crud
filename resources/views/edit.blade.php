@@ -1,3 +1,5 @@
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="/">Back to list</a></h1>
-    <form action="/insert" method="get">
-        <input type="text" name="name">
-        <button>Add</button>
+    <h1>Edit</h1>
+    <form action="{{url('update/'.$promotion->id)}}" method="post">
+        @csrf
+        @method('PUT')
+        <input type="text" value="{{$promotion->name}}" name="name">
+        <button type="submit">Update</button>
     </form>
 </body>
 </html>
+
