@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PromotionsController;
+use App\Http\Controllers\apperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/index', [PromotionsController::class, 'select_promotion']);
+
+Route::get('/', [PromotionsController::class, 'select_promotion']);
+
+Route::get('/promotionAddPage', function(){
+    return view('index');
 });
-Route::get('/page2', function () {
-    return view('secPAge');
+
+Route::get('promotionAddPage', function(){
+    return view('promotionAddPage');
 });
+
+Route::get('addPromotion', [PromotionsController::class, 'addPromotion']);
+
+Route::get('apperAddPage/{currentPromotionId}', [PromotionsController::class, 'get_promotion_id']);
+
+Route::get('addApper', [apperController::class, 'addApper']);
+
+Route::get('editPromotionPage/{currentPromotionId}', [PromotionsController::class, 'editPromotion']);
+
+Route::put('updatePromotion/{id}', [PromotionsController::class, 'updatePromotion']);
+
+Route::get('deletePromotion/{id}', [PromotionsController::class, 'deletePromotion']);
+
+Route::get('editApperPage/{currentPromotionId}', [apperController::class, 'editApper']);
+
+Route::put('updateApperPage/{currentPromotionId}', [apperController::class, 'updateApper']);
+
+Route::get('deleteApper/{id}', [apperController::class, 'deleteApper']);
+
+
 

@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    @csrf
-    <h1>Hello world</h1>
-    <a href="/page2">click</a>
+    <h2>Add Promotion</h2>
+    <form action="addPromotion" method="GET">
+        @csrf
+        <input type="text" name="name" placeholder="Promotion name">
+        <button>Add</button>
+    </form>
+
 </body>
 </html>
