@@ -44,4 +44,14 @@ class PromotionsController extends Controller
         $promotion->delete();
         return redirect('');
     }
+
+    public function search($name=null){ 
+        if($name == null){
+            $data =Promotion::all();
+            return view('index_search',compact('data'));        }
+        else {
+            $data =Promotion::where('name', 'like','%'.$name.'%')->get();
+            return view('index_search',compact('data'));
+        }
+    }
 }
