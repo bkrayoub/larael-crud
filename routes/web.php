@@ -46,9 +46,9 @@ Route::put('updateApperPage/{currentPromotionId}', [apperController::class, 'upd
 
 Route::get('deleteApper/{id}', [apperController::class, 'deleteApper']);
 
-Route::get('search/{name}',[apperController::class,'search']);
+Route::get('search/{name}',[PromotionsController::class,'search']);
 
-Route::get('search',[apperController::class,'search']);
+Route::get('search',[PromotionsController::class,'search']);
 
 
 

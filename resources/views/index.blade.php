@@ -15,12 +15,11 @@
             <div id="popsec">  
 
                 <h2 id="addApper">
-                    <a><img src="/img/plus.svg" width="40px" style="opacity: 50%"></a>
+                    <a><img src="/img/plus.svg" width="40px" class="icon"></a>
                 </h2>
                 
-                <img src="/img/searche.svg" width="40px" onclick="showSearch()">
-
-                <select name="" id="select" onchange="select()">
+                <img src="/img/searche.svg" width="40px" onclick="showSearch()" class="icon">
+                <select id="select" onchange="select()">
                     <option value="" hidden>There is no promotion selected</option>
                         @foreach ($promotion as $row)
                             <option value="{{$row->id}}">{{$row->Promo_name}}</option>
@@ -31,14 +30,13 @@
                 <input type="text" name="search" style="display: none" id="search" placeholder="Search in current promotion">
                 
                 <div id="managePromotion">
-                    <p><img src="/img/setting.svg" width="40px" alt="Manage promotion" style="opacity: 50%"></p>
-                    
+                    <p><img src="/img/setting.svg" width="40px" alt="Manage promotion" class="icon"></p> 
                 </div>
             </div>
 
             <div id="container">
                 <div id="table">
-                    <table>
+                    <table id="data">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -48,7 +46,7 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody id="tbody">
+                        <tbody id="tbody" class="data">
                             @foreach ($apper as $row)
                                 <tr>
                                     <td>{{$row->id}}</td>
@@ -56,8 +54,6 @@
                                     <td>{{$row->lastName}}</td>
                                     <td>{{$row->email}}</td>
                                     <td>
-                                        
-                                        
                                         <a href="editApperPage/{{$row->id}}"><img src="img/edit.png" width="40px"></a>
                                         <a href="deleteApper/{{$row->id}}}" style="color: darkred;"><img src="img/delete.png" width="40px"></a>
                                     </td>

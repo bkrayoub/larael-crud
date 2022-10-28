@@ -27,7 +27,6 @@ function showSearch() {
 
 
 // search
-
 let search_inp = document.querySelector('#search');
 
 search_inp.addEventListener('keyup', () => {
@@ -39,3 +38,9 @@ search_inp.addEventListener('keyup', () => {
         document.getElementById('data').innerHTML = data;
     })
 })
+
+
+
+function selectpromotion() {
+
+}

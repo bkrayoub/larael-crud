@@ -19,6 +19,7 @@ body {
     margin-top: 100px;
     margin-bottom: 70px;
     width: 700px;
+    height: 90px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -182,5 +183,20 @@ tr .line {
 }
 button {
     cursor: pointer;
+}
+
+#slctpro {
+    background-color: #5A98F5;
+    font-weight: bold;
+    width: 200px;
+    color: rgb(249, 249, 249);
+}
+.icon {
+    opacity: 90%;
+    transition: .33s;
+}
+.icon:hover {
+    transition: .33s;
+    opacity: 60%; 
 }
 

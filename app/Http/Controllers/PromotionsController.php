@@ -47,11 +47,11 @@ class PromotionsController extends Controller
 
     public function search($name=null){ 
         if($name == null){
-            $data =Promotion::all();
-            return view('index_search',compact('data'));        }
+            $data = Promotion::all();
+            return view('search',compact('data'));        }
         else {
-            $data =Promotion::where('name', 'like','%'.$name.'%')->get();
-            return view('index_search',compact('data'));
+            $data = Promotion::where('Promo_name', 'like','%'.$name.'%')->get();
+            return view('search',compact('data'));
         }
     }
 }

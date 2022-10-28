@@ -42,6 +42,4 @@ class apperController extends Controller
         $apper->delete();
         return redirect('');
     }
-
-
 }
